@@ -1,0 +1,78 @@
+
+average_delivery_time:
+  type: pandas.CSVDataSet
+  filepath: "data/07_model_output/average_delivery_time.csv"
+
+deliverytime_data:
+  type: pandas.CSVDataSet
+  filepath: "/home/kali/Desktop/kedro/asi-project/data/01_raw/deliverytime.csv"
+
+clean_data:
+  type: pandas.CSVDataSet
+  filepath: "data/02_intermediate/clean_data.csv"
+  save_args:
+    index: False
+
+distance_data:
+  type: pandas.CSVDataSet
+  filepath: "data/03_primary/distance_data.csv"
+  save_args:
+    index: False
+
+features:
+  type: pandas.CSVDataSet
+  filepath: "data/04_feature/features.csv"
+  save_args:
+    index: False
+
+target:
+  type: pandas.CSVDataSet
+  filepath: "data/04_feature/target.csv"
+  save_args:
+    index: False
+
+x_train:
+  type: pandas.CSVDataSet
+  filepath: "data/05_model_input/x_train.csv"
+  save_args:
+    index: False
+
+x_test:
+  type: pandas.CSVDataSet
+  filepath: "data/05_model_input/x_test.csv"
+  save_args:
+    index: False
+
+y_train:
+  type: pandas.CSVDataSet
+  filepath: "data/05_model_input/y_train.csv"
+  save_args:
+    index: False
+
+y_test:
+  type: pandas.CSVDataSet
+  filepath: "data/05_model_input/y_test.csv"
+  save_args:
+    index: False
+
+lstm_model:
+  type: kedro.extras.datasets.pickle.PickleDataSet
+  filepath: "data/06_models/lstm_model.pickle"
+
+predictions:
+  type: pandas.CSVDataSet
+  filepath: "data/07_model_output/predictions.csv"
+  save_args:
+    index: False
+
+rf_trained_model:
+  type: kedro.extras.datasets.pickle.PickleDataSet
+  filepath: "data/06_models/rf_trained_model.pkl"
+
+gb_trained_model:
+  type: kedro.extras.datasets.pickle.PickleDataSet
+  filepath: "data/06_models/gb_trained_model.pkl"
+
+additional_data:
+  type: pandas.CSVDataSet
+  filepath: "data/01_raw/new_deliverytime.csv"

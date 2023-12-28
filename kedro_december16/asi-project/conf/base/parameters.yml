@@ -1,0 +1,10 @@
+
+test_size: 0.1
+random_state: 42
+deliverytime_data_path: data/01_raw/deliverytime.csv
+
+additional_data_path: "data/01_raw/new_deliverytime.csv"
+test_size_additional: 0.2
+random_state_additional: 42
+rf_model_path: "data/06_models/rf_trained_model.pkl"
+gb_model_path: "data/06_models/gb_trained_model.pkl"
