@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  kedro-app:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - KEDRO_HOME=/home/kali/Desktop/kedro/asi-project
+    volumes:
+      - .:/home/kali/Desktop/kedro/asi-project
+    command: bash run_kedro.sh
